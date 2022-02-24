@@ -1,26 +1,45 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext",
+			"es6"
+		],
+		"allowJs": true,
+		"baseUrl": ".",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react",
+		"types": [
+			"jest",
+			"node"
+		],
+		"importsNotUsedAsValues": "preserve",
+		"paths": {
+			"utils/*": ["./src/app/utils/*"],
+			"styles/*": ["./src/app/styles/*"],
+			"components/*": ["./src/app/components/*"],
+			"models/*": ["./src/app/models/*"],
+			"pages/*": ["./src/app/pages/*"],
+			"config/*": ["./src/app/config/*"],
+			"services/*": ["./src/app/services/*"],
+			"environments/*": ["./src/environments/*"]
+		}
+	},
+	"include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+	"exclude": [
+		"build",
+		"node_modules"
+	]
 }
+
